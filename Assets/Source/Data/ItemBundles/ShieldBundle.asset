@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921a07783d394b3a9102b3395340fa36, type: 3}
+  m_Name: ShieldBundle
+  m_EditorClassIdentifier: 
+  itemConfigs:
+  - {fileID: 11400000, guid: 51107fd0452feb043b389b7f454c5eca, type: 2}
+  - {fileID: 11400000, guid: 5e70c401ad48faf4e88246a341649aac, type: 2}
+  - {fileID: 11400000, guid: 80357d099496e1e47b06259d42a2cab2, type: 2}
+  - {fileID: 11400000, guid: 6798e3a54d3ba634487abddbe1a56c28, type: 2}
+  - {fileID: 11400000, guid: 42043d0c75ea549468ee1da2b7564db2, type: 2}
+  - {fileID: 11400000, guid: 5fdb8211164bd8f4fb774d000a93dce8, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921a07783d394b3a9102b3395340fa36, type: 3}
+  m_Name: HelmetBundle
+  m_EditorClassIdentifier: 
+  itemConfigs:
+  - {fileID: 11400000, guid: c3468a5a62477d045afa715f96c27ad6, type: 2}
+  - {fileID: 11400000, guid: d88f2d5c7372a164997e605bedfa942d, type: 2}
+  - {fileID: 11400000, guid: 989848c364a46384891731f9a55ba755, type: 2}
+  - {fileID: 11400000, guid: 25ca6499f66654243bb4c065ccd1e9b5, type: 2}
+  - {fileID: 11400000, guid: 2141623e0abd0634696376f8289bb5bc, type: 2}
+  - {fileID: 11400000, guid: 1504ea0803d46024c9c99c9ce6d34a66, type: 2}
+  - {fileID: 11400000, guid: 51e7584fabac9cc44a77eefb1119f235, type: 2}

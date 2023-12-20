@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921a07783d394b3a9102b3395340fa36, type: 3}
+  m_Name: BootsBundle
+  m_EditorClassIdentifier: 
+  itemConfigs:
+  - {fileID: 11400000, guid: d489f04c43ad58c4a90c19ca5e0fe026, type: 2}
+  - {fileID: 11400000, guid: eedc43f21af7ad643bbc4d1ef34169a7, type: 2}
+  - {fileID: 11400000, guid: 951848c5df8d68341bb4752dc103533f, type: 2}
+  - {fileID: 11400000, guid: 96e35a91e78499f4e9d08cc5a8314eeb, type: 2}
+  - {fileID: 11400000, guid: 5d0356fc745bf0b4f9f6582f8d0936a0, type: 2}
+  - {fileID: 11400000, guid: 483e510999fb75a44acd492c84543981, type: 2}

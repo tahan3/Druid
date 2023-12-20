@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd43c3acf4d14d32b27d1365dfa5a898, type: 3}
+  m_Name: CharacteristicSpritesStorage
+  m_EditorClassIdentifier: 
+  items:
+    _serializedList:
+    - Key: 1
+      Value: {fileID: -1585909795, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 2
+      Value: {fileID: -653336662, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 3
+      Value: {fileID: -582196715, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 4
+      Value: {fileID: -85967246, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 5
+      Value: {fileID: 1266239477, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 6
+      Value: {fileID: -2029561069, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 7
+      Value: {fileID: 248556108, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 8
+      Value: {fileID: -1515132593, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 9
+      Value: {fileID: 342584138, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 10
+      Value: {fileID: -266457999, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 11
+      Value: {fileID: -1526382255, guid: 1e124166f276b174a80179d594418f90, type: 3}
+    - Key: 12
+      Value: {fileID: 1550078142, guid: 1e124166f276b174a80179d594418f90, type: 3}
