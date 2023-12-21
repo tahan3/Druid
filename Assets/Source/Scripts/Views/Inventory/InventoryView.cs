@@ -1,10 +1,13 @@
+using System;
 using System.Collections.Generic;
 using Source.Scripts.Characteristics;
 using Source.Scripts.Container;
 using Source.Scripts.Data;
 using Source.Scripts.Inventory;
 using Source.Scripts.Items;
+using Source.Scripts.UI;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Zenject;
 
@@ -31,8 +34,8 @@ namespace Source.Scripts.Views.Inventory
         private StorageByType<ItemType, Sprite> _itemTypeSprites;
         private StorageByType<CharacteristicType, Sprite> _characteristicTypeSprites;
 
-        private List<InventoryButton<ItemType>> _itemSortButtons;
-        private List<InventoryButton<CharacteristicType>> _characteristicSortButtons;
+        private ComponentsKeyValueContainer<ItemType, Button> _itemSortButtons;
+        private ComponentsKeyValueContainer<CharacteristicType, Button> _characteristicSortButtons;
 
         private List<InventorySlotView> _slots;
         
@@ -49,8 +52,11 @@ namespace Source.Scripts.Views.Inventory
             _viewsHandler = viewsHandler;
 
             _slots = new List<InventorySlotView>();
-            _itemSortButtons = new List<InventoryButton<ItemType>>();
-            _characteristicSortButtons = new List<InventoryButton<CharacteristicType>>();
+            _itemSortButtons =
+                new ComponentsKeyValueContainer<ItemType, Button>(itemTypeButtonsContainer, itemTypeButtonPrefab);
+            _characteristicSortButtons =
+                new ComponentsKeyValueContainer<CharacteristicType, Button>(characteristicButtonsContainer,
+                    characteristicButtonPrefab);
 
             _itemTypeSprites = itemTypeSprites;
             _characteristicTypeSprites = characteristicTypeSprites;
@@ -82,6 +88,7 @@ namespace Source.Scripts.Views.Inventory
 
         private void ShowInventory()
         {
+            _currentItemType = ItemType.None;
             ShowSlots(_inventoryHandler.GetInventorySlots());
         }
         
@@ -102,7 +109,14 @@ namespace Source.Scripts.Views.Inventory
         
         private void ShowInventory(CharacteristicType characteristicType)
         {
-            ShowSlots(_inventoryHandler.GetInventorySlots(_currentItemType, characteristicType));
+            if (_currentItemType == ItemType.None)
+            {
+                ShowSlots(_inventoryHandler.GetInventorySlots(characteristicType));
+            }
+            else
+            {
+                ShowSlots(_inventoryHandler.GetInventorySlots(_currentItemType, characteristicType));
+            }
         }
 
         private void ShowSlots(List<InventorySlot> inventorySlots)
@@ -142,27 +156,34 @@ namespace Source.Scripts.Views.Inventory
 
         private void CharacteristicsButtonCheck(CharacteristicType characteristicType)
         {
-            if (!_characteristicSortButtons.Exists(x => x.Type == characteristicType))
+            if (!_characteristicSortButtons.KeyCheck(characteristicType))
             {
-                var button = Instantiate(characteristicButtonPrefab, characteristicButtonsContainer);
-                button.image.sprite = _characteristicTypeSprites.GetValue(characteristicType);
-                _characteristicSortButtons.Add(new InventoryButton<CharacteristicType>()
-                    { Button = button, Type = characteristicType });
-
-                button.onClick.AddListener(() => ShowInventory(characteristicType));
+                InitButton(_characteristicSortButtons.AddValue(characteristicType),
+                    _characteristicTypeSprites.GetValue(characteristicType),
+                    () => ShowInventory(characteristicType));
             }
         }
 
         private void ItemTypeButtonCheck(ItemType itemType)
         {
-            if (!_itemSortButtons.Exists(x => x.Type == itemType))
+            if (!_itemSortButtons.KeyCheck(itemType))
             {
-                var button = Instantiate(itemTypeButtonPrefab, itemTypeButtonsContainer);
-                button.image.sprite = _itemTypeSprites.GetValue(itemType);
-                _itemSortButtons.Add(new InventoryButton<ItemType>() { Button = button, Type = itemType });
-
-                button.onClick.AddListener(() => ShowInventory(itemType));
+                InitButton(_itemSortButtons.AddValue(itemType), 
+                    _itemTypeSprites.GetValue(itemType),
+                    () => ShowInventory(itemType));
             }
+        }
+
+        private Button InitButton(Button button, Sprite sprite, UnityAction callback = null)
+        {
+            button.image.sprite = sprite;
+            
+            if (callback != null)
+            {
+                button.onClick.AddListener(callback);
+            }
+
+            return button;
         }
     }
 }

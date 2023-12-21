@@ -12,6 +12,7 @@ namespace Source.Scripts.Items
         MeleeWeapon2H,
         Misc,
         Ring,
-        Shield
+        Shield,
+        None
     }
 }

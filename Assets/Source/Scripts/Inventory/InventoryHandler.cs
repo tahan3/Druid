@@ -42,6 +42,20 @@ namespace Source.Scripts.Inventory
             return _inventorySlotsStorage.Inventory[type].Values.ToList();
         }
 
+        public List<InventorySlot> GetInventorySlots(CharacteristicType characteristicType)
+        {
+            List<InventorySlot> slots = new List<InventorySlot>();
+
+            foreach (var inventoryKey in _inventorySlotsStorage.Inventory.Keys)
+            {
+                slots.AddRange(_inventorySlotsStorage.Inventory[inventoryKey].Values
+                    .Where(x => x.item.characteristics
+                        .Exists(y => y.type == characteristicType)).ToList());
+            }
+            
+            return slots;
+        }
+        
         public List<InventorySlot> GetInventorySlots(ItemType itemType, CharacteristicType characteristicType)
         {
             return _inventorySlotsStorage.Inventory[itemType].Values
