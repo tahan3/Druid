@@ -24,6 +24,7 @@ namespace Source.Scripts.Views.Inventory
 
         [Header("Buttons")] 
         [SerializeField] private Button mainMenuButton;
+        [SerializeField] private Button allButton;
         
         private InventoryHandler _inventoryHandler;
         private IViewsHandler _viewsHandler;
@@ -57,8 +58,9 @@ namespace Source.Scripts.Views.Inventory
             eventsHandler.OnGetItem += NewButtonCheck;
 
             mainMenuButton.onClick.AddListener(() => _viewsHandler.ShowView(ViewType.MainMenu));
+            allButton.onClick.AddListener(ShowInventory);
                 
-            /*InitSlots();*/
+            InitSlots();
         }
 
         private void InitSlots()
@@ -67,11 +69,6 @@ namespace Source.Scripts.Views.Inventory
             
             foreach (var inventorySlot in inventory)
             {
-                var slot = CreateSlot();
-                slot.Init(_inventoryHandler.GetItemSprite(inventorySlot.item), inventorySlot.count,
-                    inventorySlot.item.characteristics);
-                slot.gameObject.SetActive(true);
-
                 NewButtonCheck(inventorySlot.item);
             }
         }
