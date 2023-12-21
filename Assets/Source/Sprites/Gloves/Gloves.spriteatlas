@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Gloves
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 512
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: a65de0048cac680449a4c3258c0b7e8f, type: 3}
+    - {fileID: 2800000, guid: cf9b836bfeb15904697f347b35b88c77, type: 3}
+    - {fileID: 2800000, guid: 1bc697091f6afa44390ecacc48ff19c7, type: 3}
+    - {fileID: 2800000, guid: b225e8a0f1489e348b37c2197e117939, type: 3}
+    - {fileID: 2800000, guid: 8bc7953de00568440956c210cee36be8, type: 3}
+    - {fileID: 2800000, guid: b0ad8bace5013ca449a0b1e8d908402c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b225e8a0f1489e348b37c2197e117939, type: 3}
+  - {fileID: 21300000, guid: a65de0048cac680449a4c3258c0b7e8f, type: 3}
+  - {fileID: 21300000, guid: 1bc697091f6afa44390ecacc48ff19c7, type: 3}
+  - {fileID: 21300000, guid: cf9b836bfeb15904697f347b35b88c77, type: 3}
+  - {fileID: 21300000, guid: b0ad8bace5013ca449a0b1e8d908402c, type: 3}
+  - {fileID: 21300000, guid: 8bc7953de00568440956c210cee36be8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - GreyKnight
+  - BanditLightArmor
+  - DarkMountain
+  - BattleguardArmor
+  - Scout
+  - ManticoreArmor
+  m_RenderDataMap: {}
+  m_Tag: Gloves
+  m_IsVariant: 0
